@@ -37,25 +37,18 @@ for (let album of musicCollection) {
     console.log(`Название: ${album.title}, автор: ${album.artist}, год издания: ${album.year}`);
 };
 
-const chefsMap = new Map([
-    ["Пицца 'Маргарита'", "Виктор"],
-    ["Пицца 'Пепперони'", "Виктор"],
-    ["Суши 'Филадельфия'", "Ольга"],
-    ["Суши 'Калифорния'", "Ольга"],
-    ["Тирамису", "Дмитрий"],
-    ["Чизкейк", "Дмитрий"],
-]);
-const ordersMap = new Map();
 
-const client1 = { name: "Алексей" };
-const client2 = { name: "Мария" };
-const client3 = { name: "Ирина" };
 
-ordersMap.set(client1, ["Пицца 'Пепперони'", "Тирамису"]);
-ordersMap.set(client2, ["Суши 'Калифорния'", "Пицца 'Маргарита'"]);
-ordersMap.set(client3, ["Чизкейк"]);
-console.log(ordersMap);
+const menu = new Map();
+menu.set('Виктор', ['Пицца "Маргарита"', 'Пицца "Пепперони"']).set('Ольга', ['Суши "Филадельфия"', 'Суши "Калифорния"']).set('Дмитрий', ['Тирамису', 'Чизкейк']);
 
-ordersMap.forEach((order, client) => {
-    console.log(`Клиент ${client.name} заказал: ${order}`);
+const orders = new Map();
+orders.set('Алексей', ['Пицца "Пепперони"', 'Тирамису']).set('Мария', ['Суши "Филадельфия"', 'Пицца "Маргарита"']).set('Ирина', 'Чизкейк');
+
+orders.forEach((value, key) => {
+    console.log(`Клиент ${key} заказал ${value}`);
 });
+
+// if (menu.values() === orders.values()) {
+//     console.log(menu.key());
+// }
