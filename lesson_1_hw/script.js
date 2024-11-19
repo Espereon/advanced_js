@@ -56,6 +56,5 @@ orders.forEach((value, key) => {
 menu.forEach((value, key) => {
     console.log(`Повар ${key} умеет готовить ${value}`);
 })
-// if (menu.values() === orders.values()) {
-//     console.log(menu.key());
-// }
+/* Возможно я не понял задание, нам необходимо было выводить к каждому заказу клиента, какой повар занят?
+ либо необходимо просто вывести как я это сделал? */
