@@ -49,6 +49,6 @@ orders.forEach((value, key) => {
     console.log(`Клиент ${key} заказал ${value}`);
 });
 
-// if (menu.values() === orders.values()) {
-//     console.log(menu.key());
-// }
+// console.log(orders.values());
+for (let order of orders.values()) {
+console.log(order);}
