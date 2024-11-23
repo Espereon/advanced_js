@@ -1,3 +1,4 @@
+// Задание № 1
 /* посмотрите, пожалуйста, метод проверки на дубликаты при удалении, я не смог придумать иное, можете подсказать как иначе и может быть короче можно было сделать? */
 
 class library {
@@ -62,5 +63,44 @@ let arr = new library(arr1);
 
 // console.log(arr.hasBook('Гарри поттер 1')); // проверка существующей книги
 // console.log(arr.hasBook('Гарри поттер 7')); // проверка несущсвтуеющей книги
+
+
+// Задание № 2
+const text = document.querySelector('.input');
+const btn = document.querySelector('.btn');
+const comments = document.querySelector('.comments_list')
+// вытаскиваем данные из data.js
+initialData.forEach(product => {
+    product.reviews.forEach(review => {
+        const li = document.createElement('li');
+        li.textContent = review.text;
+        comments.appendChild(li);
+    });
+});
+// событие на клик в котором функции на проврку и добавлние в поле отзывов
+btn.addEventListener('click', function (e) {
+    const inputText = text.value;
+    try {
+        validateLength(inputText);
+        addComment(inputText);
+    } catch (error) {
+        console.error(error);
+    }
+});
+// проверка на длинну отзыва
+function validateLength(value) {
+    if (value.length > 5 && value.length < 50) { // поставил 5 и 50 для лёгкой проверки
+        return value;
+    } else {
+        throw new Error('Комментарий должен быть от 50 до 500 символов')
+    }
+}
+// функция для добавления комментария
+function addComment(value) {
+    const li = document.createElement('li');
+    li.classList.add('comment');
+    li.textContent = value;
+    comments.appendChild(li);
+}
 
 
