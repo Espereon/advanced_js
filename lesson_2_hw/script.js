@@ -89,7 +89,7 @@ btn.addEventListener('click', function (e) {
 });
 // проверка на длинну отзыва
 function validateLength(value) {
-    if (value.length > 5 && value.length < 50) { // поставил 5 и 50 для лёгкой проверки
+    if (value.length > 5 || value.length < 50) { // поставил 5 и 50 для лёгкой проверки
         return value;
     } else {
         throw new Error('Комментарий должен быть от 50 до 500 символов')
