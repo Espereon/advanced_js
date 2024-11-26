@@ -8,11 +8,20 @@
 </head>
 
 <body>
-    <input type="text" id="product-name" placeholder="Введите название продукта">
-    <input type="text" id="product-review" placeholder="Напишите отзыв">
-    <button id="add-button">Добавить</button>
-    <ul id="review-list"></ul>
+    <form>
+        <h3 for="product">Название продукта</h3>
+        <input type="text" style="width: 200px" id="product-name" placeholder="Введите название продукта"><br />
+        <br />
+        <br />
+        <h3 for="review">Отзыв</h3>
+        <textarea style="height: 100px; width: 300px" id="product-review"
+            placeholder="Введите ваш отзыв"></textarea><br /><br /><br />
+        <button id="add-button">Отправить отзыв</button>
+        <br /><br /><br /><br />
+        <a href="review.html">Старница с отзывами</a>
+    </form>
     <script src="script.js"></script>
+
 
 </body>
 
