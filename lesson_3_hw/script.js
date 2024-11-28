@@ -12,7 +12,7 @@ if (data === null) {
     data = JSON.parse(localStorage.getItem("data"));
 }
 
-addButton.addEventListener("click", function () {
+addButton.addEventListener('click', function () {
     data.push({
         product: `${productField.value}`,
         reviews: `${productReview.value}`,
@@ -20,4 +20,4 @@ addButton.addEventListener("click", function () {
     localStorage.setItem(`data`, JSON.stringify(data, null, 2));
 });
 
-localStorage.clear();
+// localStorage.clear();
