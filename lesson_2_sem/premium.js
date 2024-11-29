@@ -58,4 +58,4 @@ const premiumLim = new PremiumUser('Поля', 'Гагарина');
 
 getAccountInfo(regular);
 getAccountInfo(premium);
-getAccountInfo(premium
+getAccountInfo(premium);
